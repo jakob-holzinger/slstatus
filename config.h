@@ -66,6 +66,7 @@ static const char unknown_str[] = "n/a";
  */
 static const struct arg args[] = {
 	/* function format          argument */
+    { netspeed_rx, "↓ %s B/s     |     ", "wlo1" },
     { cpu_perc,   "CPU: %s%%     |     ",  NULL },
     { ram_perc,   "RAM: %s%%     |     ",  NULL },
     { run_command,   "VOL: %s     |     ",      "pamixer --get-mute | grep -q true && echo MUTED || pamixer --get-volume" },
