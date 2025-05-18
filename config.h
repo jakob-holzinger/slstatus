@@ -65,12 +65,13 @@ static const char unknown_str[] = "n/a";
  * wifi_perc           WiFi signal in percent          interface name (wlan0)
  */
 static const struct arg args[] = {
-	/* function format          argument */
-    { netspeed_rx, "↓ %s B/s     |     ", "wlo1" },
-    { cpu_perc,   "CPU: %s%%     |     ",  NULL },
-    { ram_perc,   "RAM: %s%%     |     ",  NULL },
-    { run_command,   "VOL: %s     |     ",      "pamixer --get-mute | grep -q true && echo MUTED || pamixer --get-volume" },
-    { battery_perc, "BAT: %s%%",    "BAT0" },
-    { battery_state, " %s     |     ",       "BAT0" },
-    { datetime, "%s",           "%F %T" },
+    /* function format          argument */
+    {netspeed_rx, "🌐 %s B/s     |     ", "wlo1"},
+    {cpu_perc, "🧠 %s%%     |     ", NULL},
+    {ram_perc, "📊 %s%%     |     ", NULL},
+    {run_command, "🔊 %s     |     ",
+     "pamixer --get-mute | grep -q true && echo MUTED || pamixer --get-volume"},
+    {battery_perc, "🔋 %s%%", "BAT0"},
+    {battery_state, " %s     |     ", "BAT0"},
+    {datetime, "🕒 %s", "%F %T"},
 };
